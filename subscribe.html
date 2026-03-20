@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing — Papaya HR</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Source Sans 3', sans-serif; }
+    .nav-link { transition: color 0.2s; }
+    .nav-link:hover { color: #f59e0b; }
+    .hero-gradient { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); }
+    .plan-card { transition: transform 0.2s, box-shadow 0.2s; }
+    .plan-card:hover { transform: translateY(-4px); }
+    .popular-badge { animation: pulse 2s infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.8; } }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- Navigation -->
+  <nav class="border-b border-gray-100 sticky top-0 bg-white z-50 shadow-sm">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <span class="text-2xl font-bold text-gray-900">🍍 Papaya</span>
+        <span class="text-sm font-medium text-amber-500 tracking-widest uppercase">HR</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
+        <a href="index.html#solution" class="nav-link">Solution</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="subscribe.html" class="nav-link text-amber-500">Pricing</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+        <a href="#subscribe" class="bg-amber-500 hover:bg-amber-600 text-white px-5 py-2 rounded-full font-semibold transition-colors">
+          Get Started
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <div class="hero-gradient text-white py-20 px-6 text-center">
+    <p class="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-3">Pricing</p>
+    <h1 class="text-5xl font-bold mb-4">Simple, transparent pricing</h1>
+    <p class="text-gray-300 text-xl max-w-xl mx-auto">
+      Pay only for what you use. Scale up or down anytime — no lock-in contracts.
+    </p>
+  </div>
+
+  <!-- Toggle: Monthly / Annual -->
+  <div class="py-10 px-6 text-center">
+    <div class="inline-flex items-center gap-3 bg-gray-100 rounded-full p-1">
+      <button id="btn-monthly" onclick="setBilling('monthly')"
+        class="px-6 py-2 rounded-full text-sm font-semibold transition-all bg-white text-gray-900 shadow">
+        Monthly
+      </button>
+      <button id="btn-annual" onclick="setBilling('annual')"
+        class="px-6 py-2 rounded-full text-sm font-semibold transition-all text-gray-500">
+        Annual <span class="text-amber-500 ml-1">Save 20%</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Pricing cards -->
+  <section id="subscribe" class="px-6 pb-24">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <!-- Starter -->
+      <div class="plan-card bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
+        <p class="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-2">Starter</p>
+        <div class="flex items-end gap-1 mb-1">
+          <span class="text-5xl font-bold text-gray-900" id="price-starter">£2</span>
+          <span class="text-gray-400 mb-2">/employee/mo</span>
+        </div>
+        <p class="text-sm text-gray-400 mb-6" id="note-starter">Billed monthly</p>
+        <p class="text-gray-500 mb-8">Perfect for small businesses getting started with digital HR.</p>
+        <ul class="space-y-3 text-sm text-gray-600 mb-8">
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Up to 50 employees</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Employee records</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Absence management</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>iOS &amp; Android apps</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Email support</li>
+          <li class="flex items-center gap-2 text-gray-300"><svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>Payroll reporting</li>
+          <li class="flex items-center gap-2 text-gray-300"><svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>API access</li>
+        </ul>
+        <a href="#signup-form" class="block w-full text-center border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white px-6 py-3 rounded-full font-semibold transition-colors">
+          Start Free Trial
+        </a>
+      </div>
+
+      <!-- Professional (popular) -->
+      <div class="plan-card bg-gray-900 text-white rounded-2xl p-8 shadow-2xl relative">
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+          <span class="popular-badge bg-amber-500 text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">Most Popular</span>
+        </div>
+        <p class="text-sm font-semibold text-amber-400 uppercase tracking-widest mb-2">Professional</p>
+        <div class="flex items-end gap-1 mb-1">
+          <span class="text-5xl font-bold" id="price-pro">£3.50</span>
+          <span class="text-gray-400 mb-2">/employee/mo</span>
+        </div>
+        <p class="text-sm text-gray-500 mb-6" id="note-pro">Billed monthly</p>
+        <p class="text-gray-400 mb-8">For growing businesses that need payroll insight and integrations.</p>
+        <ul class="space-y-3 text-sm text-gray-300 mb-8">
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Unlimited employees</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Everything in Starter</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Payroll reporting &amp; snapshots</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Advanced dashboards</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>REST API access</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Priority support</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Windows desktop app</li>
+        </ul>
+        <a href="#signup-form" class="block w-full text-center bg-amber-500 hover:bg-amber-400 text-white px-6 py-3 rounded-full font-semibold transition-colors">
+          Start Free Trial
+        </a>
+      </div>
+
+      <!-- Enterprise -->
+      <div class="plan-card bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
+        <p class="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-2">Enterprise</p>
+        <div class="flex items-end gap-1 mb-1">
+          <span class="text-5xl font-bold text-gray-900">Custom</span>
+        </div>
+        <p class="text-sm text-gray-400 mb-6">Let's talk</p>
+        <p class="text-gray-500 mb-8">For large organisations needing bespoke integrations and dedicated support.</p>
+        <ul class="space-y-3 text-sm text-gray-600 mb-8">
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Everything in Professional</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Dedicated account manager</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Custom integrations</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>SLA guarantee</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>On-site onboarding</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Data migration support</li>
+        </ul>
+        <a href="index.html#contact" class="block w-full text-center border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white px-6 py-3 rounded-full font-semibold transition-colors">
+          Contact Sales
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-gray-50 border-y border-gray-100 py-20 px-6">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">Frequently asked questions</h2>
+      <div class="space-y-4" id="faq">
+
+        <div class="faq-item bg-white border border-gray-200 rounded-2xl overflow-hidden">
+          <button class="faq-toggle w-full text-left px-6 py-5 font-semibold text-gray-900 flex justify-between items-center">
+            Is there a free trial?
+            <svg class="w-5 h-5 text-gray-400 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5 text-gray-500">Yes — all plans include a 30-day free trial. No credit card required to start.</div>
+        </div>
+
+        <div class="faq-item bg-white border border-gray-200 rounded-2xl overflow-hidden">
+          <button class="faq-toggle w-full text-left px-6 py-5 font-semibold text-gray-900 flex justify-between items-center">
+            Can I change plans later?
+            <svg class="w-5 h-5 text-gray-400 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5 text-gray-500">Absolutely. You can upgrade, downgrade, or cancel at any time from your account settings. Changes take effect immediately.</div>
+        </div>
+
+        <div class="faq-item bg-white border border-gray-200 rounded-2xl overflow-hidden">
+          <button class="faq-toggle w-full text-left px-6 py-5 font-semibold text-gray-900 flex justify-between items-center">
+            How is the per-employee price calculated?
+            <svg class="w-5 h-5 text-gray-400 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5 text-gray-500">We count active employees at the end of each billing period. Add or remove employees freely — you only pay for your actual headcount.</div>
+        </div>
+
+        <div class="faq-item bg-white border border-gray-200 rounded-2xl overflow-hidden">
+          <button class="faq-toggle w-full text-left px-6 py-5 font-semibold text-gray-900 flex justify-between items-center">
+            Is my data secure and GDPR compliant?
+            <svg class="w-5 h-5 text-gray-400 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5 text-gray-500">Yes. All data is stored in UK Azure data centres, encrypted at rest and in transit. We are fully UK GDPR compliant. See our <a href="privacy.html" class="text-amber-500 hover:underline">Privacy Notice</a> for full details.</div>
+        </div>
+
+        <div class="faq-item bg-white border border-gray-200 rounded-2xl overflow-hidden">
+          <button class="faq-toggle w-full text-left px-6 py-5 font-semibold text-gray-900 flex justify-between items-center">
+            What payment methods do you accept?
+            <svg class="w-5 h-5 text-gray-400 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5 text-gray-500">We accept all major credit and debit cards (Visa, Mastercard, Amex) via Stripe. Enterprise customers can arrange invoicing.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Sign-up form -->
+  <section id="signup-form" class="py-24 px-6">
+    <div class="max-w-xl mx-auto">
+      <div class="text-center mb-10">
+        <p class="text-amber-500 text-sm font-semibold tracking-widest uppercase mb-3">Start your free trial</p>
+        <h2 class="text-4xl font-bold mb-3">30 days free, no card needed</h2>
+        <p class="text-gray-500">Tell us about your business and we'll get you set up.</p>
+      </div>
+      <form class="flex flex-col gap-4" id="trial-form" onsubmit="handleSignup(event)">
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+            <input type="text" required placeholder="Jane" class="w-full border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-400" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+            <input type="text" required placeholder="Smith" class="w-full border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-400" />
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Work Email</label>
+          <input type="email" required placeholder="jane@company.com" class="w-full border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-400" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Company Name</label>
+          <input type="text" required placeholder="Acme Ltd" class="w-full border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-400" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Number of Employees</label>
+          <select class="w-full border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-400 bg-white text-gray-900">
+            <option>1–10</option>
+            <option>11–50</option>
+            <option selected>51–200</option>
+            <option>201–500</option>
+            <option>500+</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Plan</label>
+          <select class="w-full border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-400 bg-white text-gray-900">
+            <option>Starter — £2/employee/mo</option>
+            <option selected>Professional — £3.50/employee/mo</option>
+            <option>Enterprise — Contact us</option>
+          </select>
+        </div>
+        <div class="flex items-start gap-3 mt-2">
+          <input type="checkbox" id="agree" required class="mt-1 rounded border-gray-300 text-amber-500 focus:ring-amber-400" />
+          <label for="agree" class="text-sm text-gray-500">
+            I agree to the <a href="terms.html" class="text-amber-500 hover:underline">Terms & Conditions</a> and
+            <a href="privacy.html" class="text-amber-500 hover:underline">Privacy Notice</a>.
+          </label>
+        </div>
+        <button type="submit" class="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-colors mt-2">
+          Start Free Trial
+        </button>
+        <p class="text-center text-xs text-gray-400">No credit card required. Cancel anytime.</p>
+      </form>
+      <!-- Success message (hidden by default) -->
+      <div id="success-msg" class="hidden text-center py-12">
+        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-2">You're on the list!</h3>
+        <p class="text-gray-500">We'll be in touch within one business day to get your trial set up.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-100 py-10 px-6 bg-gray-50">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <a href="index.html" class="flex items-center gap-2">
+        <span class="text-xl font-bold text-gray-900">🍍 Papaya HR</span>
+      </a>
+      <div class="flex flex-wrap items-center gap-6 text-sm text-gray-500">
+        <a href="index.html#solution" class="hover:text-gray-900 transition-colors">Solution</a>
+        <a href="index.html#about" class="hover:text-gray-900 transition-colors">About</a>
+        <a href="subscribe.html" class="hover:text-gray-900 transition-colors">Pricing</a>
+        <a href="index.html#contact" class="hover:text-gray-900 transition-colors">Contact</a>
+        <a href="terms.html" class="hover:text-gray-900 transition-colors">Terms & Conditions</a>
+        <a href="privacy.html" class="hover:text-gray-900 transition-colors">Customer Privacy Notice</a>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto mt-6 pt-6 border-t border-gray-200 text-center text-xs text-gray-400">
+      &copy; 2024 Papaya Software Ltd. All rights reserved. &nbsp;·&nbsp; Registered in England &amp; Wales
+    </div>
+  </footer>
+
+  <script>
+    // Billing toggle
+    const prices = {
+      monthly: { starter: '£2', pro: '£3.50', noteStarter: 'Billed monthly', notePro: 'Billed monthly' },
+      annual:  { starter: '£1.60', pro: '£2.80', noteStarter: 'Billed annually (save 20%)', notePro: 'Billed annually (save 20%)' }
+    };
+
+    function setBilling(mode) {
+      const p = prices[mode];
+      document.getElementById('price-starter').textContent = p.starter;
+      document.getElementById('price-pro').textContent = p.pro;
+      document.getElementById('note-starter').textContent = p.noteStarter;
+      document.getElementById('note-pro').textContent = p.notePro;
+
+      document.getElementById('btn-monthly').className = mode === 'monthly'
+        ? 'px-6 py-2 rounded-full text-sm font-semibold transition-all bg-white text-gray-900 shadow'
+        : 'px-6 py-2 rounded-full text-sm font-semibold transition-all text-gray-500';
+      document.getElementById('btn-annual').className = mode === 'annual'
+        ? 'px-6 py-2 rounded-full text-sm font-semibold transition-all bg-white text-gray-900 shadow'
+        : 'px-6 py-2 rounded-full text-sm font-semibold transition-all text-gray-500';
+    }
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const answer = btn.nextElementSibling;
+        const icon = btn.querySelector('svg');
+        answer.classList.toggle('hidden');
+        icon.style.transform = answer.classList.contains('hidden') ? '' : 'rotate(180deg)';
+      });
+    });
+
+    // Sign-up form
+    function handleSignup(e) {
+      e.preventDefault();
+      document.getElementById('trial-form').classList.add('hidden');
+      document.getElementById('success-msg').classList.remove('hidden');
+      // TODO: wire up to your backend / Stripe / email service here
+    }
+  </script>
+
+</body>
+</html>
