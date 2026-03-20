@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.papayasoftware.co.uk)",
+      "Bash(gh auth:*)",
+      "Bash(gh api:*)",
+      "Bash(git --version)",
+      "Bash(curl --version)",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" auth status)",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" repo create Papaya-Website --public --description \"Papaya HR — modern SaaS HR system website\" --source \"C:/_ANGELCODE/_GIT/Work In Progress/Website\" --remote origin --push)",
+      "WebFetch(domain:salmon-hill-09d0e5b03.1.azurestaticapps.net)",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" run list --repo robmaynard1976/Papaya-Website)",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" run view 23333495416 --repo robmaynard1976/Papaya-Website --log-failed)",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" api repos/robmaynard1976/Papaya-Website/contents/.github/workflows --jq '.[].name')",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" api repos/robmaynard1976/Papaya-Website/contents/.github/workflows/azure-static-web-apps-salmon-hill-09d0e5b03.yml --jq '.content')",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" run list --repo robmaynard1976/Papaya-Website --limit 1)"
+    ]
+  }
+}
