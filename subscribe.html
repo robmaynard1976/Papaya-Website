@@ -3,7 +3,44 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pricing — Papaya HR</title>
+    <title>HR Software Pricing — from £2/employee/month | Papaya HR</title>
+    <meta name="description" content="Papaya HR pricing starts at £2 per employee per month with no contracts. Starter, Professional, and Enterprise plans with a 30-day free trial. No credit card required." />
+    <meta property="og:title" content="HR Software Pricing | Papaya HR" />
+    <meta property="og:description" content="From £2/employee/month. No contracts. 30-day free trial. Starter, Professional, and Enterprise plans." />
+    <meta property="og:type" content="website" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is there a free trial?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes — all plans include a 30-day free trial. No credit card required to start." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I change plans later?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can upgrade, downgrade, or cancel at any time from your account settings. Changes take effect immediately." }
+        },
+        {
+          "@type": "Question",
+          "name": "How is the per-employee price calculated?",
+          "acceptedAnswer": { "@type": "Answer", "text": "We count active employees at the end of each billing period. Add or remove employees freely — you only pay for your actual headcount." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my data secure and GDPR compliant?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. All data is stored in UK Azure data centres, encrypted at rest and in transit. Papaya HR is fully UK GDPR compliant." }
+        },
+        {
+          "@type": "Question",
+          "name": "What payment methods do you accept?",
+          "acceptedAnswer": { "@type": "Answer", "text": "We accept all major credit and debit cards (Visa, Mastercard, Amex) via Stripe. Enterprise customers can arrange invoicing." }
+        }
+      ]
+    }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -53,10 +90,10 @@
   <!-- Navigation -->
   <nav class="border-b border-gray-100 sticky top-0 bg-white z-50 shadow-sm">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-2">
-        <span class="text-2xl font-bold text-gray-900">🍍 Papaya</span>
-        <span class="text-sm font-medium text-amber-500 tracking-widest uppercase">HR</span>
-      </a>
+        <a href="index.html" class="flex items-center gap-2">
+            <img src="./Images/logo_pap200.png" alt="Papaya HR Logo" class="w-12 h-12">
+            <span class="text-2xl font-bold text-gray-900">Papaya HR</span>
+        </a>
       <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
         <a href="index.html#solution" class="nav-link">Solution</a>
         <a href="index.html#about" class="nav-link">About</a>
@@ -66,6 +103,20 @@
           Get Started
         </a>
       </div>
+      <!-- Mobile menu button -->
+      <button id="menu-toggle" class="md:hidden text-gray-600 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white px-6 py-4 flex flex-col gap-4 text-sm font-medium text-gray-600">
+      <a href="index.html#solution" class="nav-link">Solution</a>
+      <a href="index.html#about" class="nav-link">About</a>
+      <a href="subscribe.html" class="nav-link text-amber-500">Pricing</a>
+      <a href="index.html#contact" class="nav-link">Contact</a>
+      <a href="#subscribe" class="bg-amber-500 text-white px-5 py-2 rounded-full font-semibold text-center">Get Started</a>
     </div>
   </nav>
 
@@ -303,7 +354,7 @@
       </div>
     </div>
     <div class="max-w-6xl mx-auto mt-6 pt-6 border-t border-gray-200 text-center text-xs text-gray-400">
-      &copy; 2024 Papaya Software Ltd. All rights reserved. &nbsp;·&nbsp; Registered in England &amp; Wales
+      &copy; 2026 Papaya Software Ltd. All rights reserved. &nbsp;·&nbsp; Registered in England &amp; Wales
     </div>
   </footer>
 
@@ -346,6 +397,16 @@
       document.getElementById('success-msg').classList.remove('hidden');
       // TODO: wire up to your backend / Stripe / email service here
     }
+
+    // Mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.add('hidden');
+      });
+    });
   </script>
 
 </body>
